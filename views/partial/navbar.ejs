@@ -1,0 +1,31 @@
+<ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm mb-5" id="pillNav2" role="tablist"
+  style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link rounded-5" id="home-tab2" href="/" role="tab" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link rounded-5" id="profile-tab2" href="/instructor/panel" role="tab" aria-selected="false" >Instructor</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link rounded-5" id="contact-tab2" href="/admin" role="tab" aria-selected="false" >Admin</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link rounded-5" id="login-tab2" href="/admin/login" role="tab" aria-selected="false" >Login</a>
+  </li>
+</ul>
+
+<script>
+  // Get the current URL path
+const currentPath = window.location.pathname;
+
+// Get all nav links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Loop through nav links and add active class if the href matches the current path
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentPath) {
+    link.classList.add('active');
+  }
+});
+
+</script>
